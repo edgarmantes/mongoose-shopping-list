@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha test/test.js"
   },
-  "author": "",
+  "author": "Edgar Mantes",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
