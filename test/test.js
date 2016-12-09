@@ -1,7 +1,6 @@
-// process.env.NODE_ENV === 'production' ?
-//                             'mongodb://ds127928.mlab.com:27928/mongodb-shopping-list-thinkful'
+global.DATABASE_URL = 'mongodb://emantes:Lakers7!@ds127928.mlab.com:27928/mongodb-shopping-list-thinkful'
 
-global.DATABASE_URL = 'mongodb://localhost/shopping-list-test';
+                                //localhost/shopping-list-test';
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
