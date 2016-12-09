@@ -22,6 +22,7 @@ describe('Shopping List', function() {
                         {name: 'Peppers'}, function() {
                 done();
                 Item.find(function(err, items){
+                    console.log(items)
                     testObject = items[0].id
                 })
             });
