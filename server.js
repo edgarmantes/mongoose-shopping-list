@@ -16,7 +16,7 @@ var runServer = function(callback) {
         }
 
         app.listen(config.PORT, function() {                // after it connects to database express listens on a port
-            console.log('Listening on localhost:' + config.PORT);
+            console.log('Listening on:' + config.PORT);
             if (callback) {
                 callback();
             }
