@@ -1,21 +1,21 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+var express = require('express');           // Express
+var bodyParser = require('body-parser');    // express
+var mongoose = require('mongoose');         // mongoose
 
-var config = require('./config');
+var config = require('./config');           // express and mongoose
+    
+var app = express();                        //express
 
-var app = express();
-
-app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(bodyParser.json());                 //express
+app.use(express.static('public'));          // express
 
 var runServer = function(callback) {
-    mongoose.connect(config.DATABASE_URL, function(err) {
+    mongoose.connect(config.DATABASE_URL, function(err) {   //connects to database with mongoose
         if (err && callback) {
             return callback(err);
         }
 
-        app.listen(config.PORT, function() {
+        app.listen(config.PORT, function() {                // after it connects to database express listens on a port
             console.log('Listening on localhost:' + config.PORT);
             if (callback) {
                 callback();
@@ -24,7 +24,7 @@ var runServer = function(callback) {
     });
 };
 
-if (require.main === module) {
+if (require.main === module) {   // this allows you to run as a node command or a module.
     runServer(function(err) {
         if (err) {
             console.error(err);
@@ -40,7 +40,7 @@ exports.runServer = runServer;
 Routes
 ***************************/
 
-var Item = require('./models/item');
+var Item = require('./models/item');   // through mongoose, uses the schema that is set up.
 
 app.get('/items', function(req, res) {
     Item.find(function(err, items) {
