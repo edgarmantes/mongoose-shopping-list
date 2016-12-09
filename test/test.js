@@ -1,4 +1,4 @@
-global.DATABASE_URL = 'mongodb://emantes:ThinkfulStudent1982@ds127928.mlab.com:27928/mongodb-shopping-list-thinkful'
+global.DATABASE_URL = 'mongodb://emantes:Lakers7!@ds127928.mlab.com:27928/mongodb-shopping-list-thinkful'
 
                                 //localhost/shopping-list-test';
 
